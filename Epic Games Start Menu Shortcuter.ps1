@@ -23,7 +23,7 @@ foreach($mani_file in $mani_files){
     $CatalogItemId = $mani_json.CatalogItemId
     $AppName = $mani_json.AppName
 
-    $attrs = @(
+    $requied_attrs = @(
         $LaunchExecutable
         $DisplayName
         $InstallLocation
@@ -32,7 +32,7 @@ foreach($mani_file in $mani_files){
         $AppName
     )
 
-    if ( -not ($attrs | ForEach-Object { $_ -eq $null -or $_ -eq "" } | Where-Object { $_ }) -and (Test-Path -Path $InstallLocation -PathType Container) ){
+    if ( -not ($requied_attrs | ForEach-Object { $_ -eq $null -or $_ -eq "" } | Where-Object { $_ }) -and (Test-Path -Path $InstallLocation -PathType Container) ){
         $link_path = ($output_path + "\" + $DisplayName + ".url")
         "[{000214A0-0000-0000-C000-000000000046}]" | Set-Content $link_path
         "Prop3=19,0" | Add-Content $link_path
