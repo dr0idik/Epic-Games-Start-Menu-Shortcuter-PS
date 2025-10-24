@@ -6,7 +6,6 @@
 
 $mani_path = "$env:ProgramData\Epic\EpicGamesLauncher\Data\Manifests"
 $output_path = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Epic Games"
-$testFilePath = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\test"
 
 Remove-Item $output_path -Recurse -ErrorAction SilentlyContinue
 New-Item $output_path -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
@@ -63,3 +62,4 @@ foreach($mani_file in $mani_files){
 if (-not ($args -contains "-skip")) {
     pause
 }
+
