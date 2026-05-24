@@ -1,4 +1,4 @@
-# Epic Games Start Menu Shortcuter (PowerShell script)
+# Epic Games Start Menu Shortcuter (PowerShell version)
 Adds installed Epic Games Store games to the Windows Start Menu 🪟  
 so they become searchable through Windows Search 🔎
 
